@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  width: 159px;
+  height: 205px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  overflow: hidden; /* Prevents image overflow */
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 170px; /* Specific ratio for image section */
+  object-fit: cover;
+}
+
+.banner {
+  height: 35px; /* Bottom section for the chip */
+  display: flex;
+  align-items: center;
+  padding: 0px 8px;
+  background-color: var(--color-white);
+}
+
+.chip {
+  background-color: var(--color-black) !important;
+  color: var(--color-white) !important;
+  height: 23px !important;
+  font-family: "Poppins" !important;
+}
+
+.titleWrapper p {
+  color: var(--color-white);
+  font-size: 14px;
+  margin: 0;
+}

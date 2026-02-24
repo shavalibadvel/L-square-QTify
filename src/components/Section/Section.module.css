@@ -1,0 +1,26 @@
+.sectionWrapper {
+  padding: 20px 32px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Horizontal spacing between title and button */
+  align-items: center;
+  margin-bottom: 24px; /* Vertical spacing between header and grid */
+}
+
+.header h3 {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.toggleText {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
+  gap: 40px; /* Spacing between cards */
+}
