@@ -1,0 +1,16 @@
+.footer {
+  background-color: #121212;
+  padding: 40px 0 120px 0; /* Extra bottom padding so Music Player doesn't cover it */
+  text-align: center;
+  color: #ffffff;
+  border-top: 1px solid #222;
+}
+
+.links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.links a:hover { color: #34ad59; }

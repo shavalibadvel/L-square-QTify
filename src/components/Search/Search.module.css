@@ -1,36 +1,115 @@
 .wrapper {
-  display: flex;
-  align-items: center;
+  position: relative; /* Context for the absolute dropdown */
   width: 568px;
-  height: 48px;
-  box-sizing: border-box;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  width: 100%;
+  /* This prevents the button from jumping to a new line */
+  flex-wrap: nowrap; 
 }
 
 .search {
-  flex: 1;
-  height: 100%;
+  width: 100%; /* Takes up all available space except the button width */
+  height: 48px;
   padding: 0 15px;
-  border: 1px solid var(--color-black);
-  border-radius: 8px 0 0 8px;
+  border: 1px solid #121212;
+  border-radius: 8px 0 0 8px; /* Rounded only on the left */
   outline: none;
-  box-sizing: border-box; /* Crucial for matching heights */
+  font-family: "Poppins";
+  /* Added: ensures padding doesn't push the width beyond 100% */
+  box-sizing: border-box; 
 }
 
 .searchButton {
   width: 66px;
-  height: 100%;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
-  border-left: none;
-  border-radius: 0 8px 8px 0;
+  height: 48px; /* Must match the input height exactly */
+  background-color: #ffffff;
+  border: 1px solid #121212;
+  border-left: none; /* Removes the double border in the middle */
+  border-radius: 0 8px 8px 0; /* Rounded only on the right */
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
+  /* Added: prevents the button from shrinking */
+  flex-shrink: 0; 
 }
-.searchButton svg {
-  width: 20px;   /* Adjust to match Figma */
-  height: 20px;
-  fill: var(--color-primary); /* Or the correct color */
+
+/* Dropdown styling to match Desktop-3 screenshot */
+.dropdown {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  max-height: 400px;
+  background-color: #121212;
+  border: 1px solid #34ad59;
+  border-radius: 10px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #222;
+}
+
+.optionContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.optionImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.optionTitle { color: #ffffff; margin: 0; font-size: 14px; font-weight: 500; }
+.optionArtists { color: #b3b3b3; margin: 0; font-size: 12px; }
+.optionMeta { color: #ffffff; font-size: 12px; }
+/* Custom Scrollbar for the Search Dropdown */
+.dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+  background: #34ad59; /* Qtify Green */
+  border-radius: 10px;
+}
+
+.dropdown::-webkit-scrollbar-thumb:hover {
+  background: #2da050;
+}
+.tabs {
+  margin-bottom: 25px;
+}
+
+.tab {
+  color: #ffffff !important;
+  text-transform: none !important;
+  font-family: "Poppins" !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+
+/* Style for the active tab */
+.tab.Mui-selected {
+  color: #34c94b !important;
 }

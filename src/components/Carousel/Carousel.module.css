@@ -1,11 +1,18 @@
 .wrapper {
   position: relative;
-  width: 100%; /* Must be 100% to fill the Section row */
-  display: block; 
+  width: 100%;
 }
 
-/* Trap the arrows specifically within the carousel bounds */
-.leftNavigation, .rightNavigation {
+/* Ensure slides only take up the width of the card (159px) */
+.slide {
+  width: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftNavigation,
+.rightNavigation {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -13,5 +20,17 @@
   cursor: pointer;
 }
 
-.leftNavigation { left: 5px; }
-.rightNavigation { right: 5px; }
+.leftNavigation {
+  left: 0;
+}
+
+.rightNavigation {
+  right: 0;
+}
+
+/* If your arrows are too small, style the SVG inside */
+.leftNavigation svg,
+.rightNavigation svg {
+  width: 30px;
+  height: 30px;
+}

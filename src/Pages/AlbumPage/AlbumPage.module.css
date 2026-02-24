@@ -1,0 +1,51 @@
+.wrapper {
+  background-color: #121212;
+  min-height: 100vh;
+  /* Extra padding at bottom to clear the Music Player */
+  padding: 30px 50px 150px 50px; 
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.loading { text-align: center; color: #34c94b; margin-top: 50px; }
+
+.backButton { cursor: pointer; margin-bottom: 20px; width: fit-content; }
+.arrowCircle {
+  width: 40px; height: 40px; background-color: #000; border-radius: 50%;
+  display: flex; justify-content: center; align-items: center;
+  border: 1px solid white; font-size: 20px;
+}
+
+.header { display: flex; gap: 40px; margin-bottom: 40px; align-items: flex-end; }
+.albumImage { width: 288px; height: 288px; border-radius: 10px; box-shadow: 0 4px 60px rgba(0,0,0,.5); }
+.info h1 { font-size: 60px; margin: 0; font-weight: 900; }
+.description { font-size: 16px; margin-top: 10px; }
+.metadata { color: #b3b3b3; font-size: 14px; margin-top: 10px; }
+
+.btnGroup { display: flex; gap: 15px; margin-top: 25px; }
+.shuffleBtn { background-color: #34c94b; border: none; padding: 12px 30px; border-radius: 12px; font-weight: 700; cursor: pointer; }
+.libraryBtn { background-color: transparent; border: 1px solid #34c94b; color: #34c94b; padding: 12px 30px; border-radius: 12px; font-weight: 700; cursor: pointer; }
+
+/* Pagination Styling */
+.pagination { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-bottom: 10px; }
+.pageBtn, .arrowBtn { background: transparent; color: white; border: 1px solid #333; cursor: pointer; padding: 5px 12px; border-radius: 4px; }
+.activePage { background: #34c94b; color: black; border: 1px solid #34c94b; font-weight: bold; padding: 5px 12px; border-radius: 4px; }
+.arrowBtn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* Table Section */
+.tableHeader {
+  display: grid; grid-template-columns: 4fr 3fr 1fr;
+  padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #b3b3b3; font-weight: 600; font-size: 14px;
+}
+
+.songRow {
+  display: grid; grid-template-columns: 4fr 3fr 1fr;
+  padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+  align-items: center;
+}
+
+.songRow:hover { background-color: rgba(255,255,255,0.05); }
+.songTitleInfo { display: flex; align-items: center; gap: 15px; }
+.songTitleInfo img { width: 48px; height: 48px; border-radius: 4px; object-fit: cover; }
+.duration, .artistName { color: #b3b3b3; font-size: 14px; }

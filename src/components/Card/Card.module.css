@@ -1,15 +1,24 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 159px; /* This allows slidesPerView="auto" to work */
+  width: 159px;
+  gap: 8px; /* Space between card and text */
 }
 
 .card {
   width: 159px;
   height: 205px;
-  background-color: #ffffff; /* Explicit white surface */
+  background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Stacks image on top of banner */
+}
+
+.card img {
+  width: 100%;
+  height: 170px; /* Leaves 35px for the banner */
+  object-fit: cover;
 }
 
 .banner {
@@ -17,12 +26,21 @@
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  padding-left: 8px;
+  padding: 0px 8px;
+}
+
+.chip {
+  background-color: #121212 !important; /* Black background for the pill */
+  color: #ffffff !important;
+  font-family: "Poppins" !important;
+  font-size: 10px !important;
+  height: 23px !important;
 }
 
 .titleWrapper p {
-  color: #ffffff; /* Ensures the album/song name is white */
+  color: #ffffff;
   font-family: "Poppins";
   font-size: 14px;
-  margin: 8px 0 0 0;
+  margin: 0;
+  font-weight: 400;
 }

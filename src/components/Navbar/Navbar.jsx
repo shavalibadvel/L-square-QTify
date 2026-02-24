@@ -4,13 +4,16 @@ import Search from "../Search/Search";
 import Button from "../Button/Button";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
+// Accept 'data' as a prop from App.js
+const Navbar = ({ data }) => {
   return (
     <nav className={styles.navbar}>
       <Logo />
-      {/* Test Case 3: Must contain 'search' in placeholder */}
-      <Search placeholder="Search a album of your choice" />
-      {/* Test Case 1 & 4-8: Button must exist with correct text */}
+      {/* Pass the data prop here to fix the filter error */}
+      <Search 
+        placeholder="Search a song of your choice" 
+        data={data} 
+      />
       <Button>Give Feedback</Button>
     </nav>
   );

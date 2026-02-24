@@ -55,3 +55,19 @@
 .tab[aria-selected="true"] {
   color: #34c94b !important;
 }
+.tabs {
+  margin-bottom: 25px;
+}
+
+.tab {
+  color: #ffffff !important;
+  text-transform: none !important;
+  font-family: "Poppins" !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+
+/* Style for the active tab */
+.tab.Mui-selected {
+  color: #34c94b !important;
+}

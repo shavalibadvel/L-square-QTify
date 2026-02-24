@@ -1,0 +1,12 @@
+.sectionContainer {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.divider {
+  border: 1px solid var(--color-primary); /* Green line */
+  width: 100%;
+  margin: 0;
+}

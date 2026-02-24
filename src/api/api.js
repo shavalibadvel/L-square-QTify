@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BACKEND_ENDPOINT = "https://qtify-backend.labs.crio.do";
+export const BACKEND_ENDPOINT = "http://qtify-backend.labs.crio.do";
 
 export const fetchTopAlbums = async () => {
   try {
@@ -36,5 +36,19 @@ export const fetchGenres = async () => {
     return response.data;
   } catch (e) {
     return [];
+  }
+};
+
+
+
+
+// Add this new export to fix the error
+export const fetchAlbumDetails = async (slug) => {
+  try {
+    const response = await axios.get(`${BACKEND_ENDPOINT}/album/${slug}`);
+    return response.data;
+  } catch (e) {
+    console.error(`Error fetching album details for slug: ${slug}`, e);
+    return null;
   }
 };

@@ -1,0 +1,55 @@
+.faqWrapper {
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 100px 20px; /* Bottom padding to clear the music player */
+}
+
+.heading {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.accordionContainer {
+  width: 100%;
+  max-width: 1135px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+/* Removes the default line before accordion expansion */
+.accordion:before {
+  display: none;
+}
+
+.summary {
+  font-family: "Poppins" !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  min-height: 72px !important;
+}
+
+.expandIcon {
+  color: #34ad59; /* Qtify Green */
+  font-size: 40px !important;
+}
+
+.details {
+  background-color: #ffffff;
+  color: #121212;
+  font-family: "Poppins";
+  font-size: 18px;
+  padding: 24px !important;
+}
