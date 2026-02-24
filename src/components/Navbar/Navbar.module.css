@@ -1,0 +1,8 @@
+.navbar {
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 32px;
+  background-color: var(--color-primary); /* Green background from Figma */
+}
