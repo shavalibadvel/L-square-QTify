@@ -29,3 +29,8 @@
   align-items: center;
   box-sizing: border-box;
 }
+.searchButton svg {
+  width: 20px;   /* Adjust to match Figma */
+  height: 20px;
+  fill: var(--color-primary); /* Or the correct color */
+}

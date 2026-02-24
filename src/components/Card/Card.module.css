@@ -1,41 +1,28 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  width: 159px; /* This allows slidesPerView="auto" to work */
 }
 
 .card {
   width: 159px;
   height: 205px;
+  background-color: #ffffff; /* Explicit white surface */
   border-radius: 10px;
-  background-color: var(--color-white);
-  overflow: hidden; /* Prevents image overflow */
-  position: relative;
-}
-
-.card img {
-  width: 100%;
-  height: 170px; /* Specific ratio for image section */
-  object-fit: cover;
+  overflow: hidden;
 }
 
 .banner {
-  height: 35px; /* Bottom section for the chip */
+  height: 35px;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
-  padding: 0px 8px;
-  background-color: var(--color-white);
-}
-
-.chip {
-  background-color: var(--color-black) !important;
-  color: var(--color-white) !important;
-  height: 23px !important;
-  font-family: "Poppins" !important;
+  padding-left: 8px;
 }
 
 .titleWrapper p {
-  color: var(--color-white);
+  color: #ffffff; /* Ensures the album/song name is white */
+  font-family: "Poppins";
   font-size: 14px;
-  margin: 0;
+  margin: 8px 0 0 0;
 }

@@ -1,0 +1,17 @@
+.wrapper {
+  position: relative;
+  width: 100%; /* Must be 100% to fill the Section row */
+  display: block; 
+}
+
+/* Trap the arrows specifically within the carousel bounds */
+.leftNavigation, .rightNavigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.leftNavigation { left: 5px; }
+.rightNavigation { right: 5px; }

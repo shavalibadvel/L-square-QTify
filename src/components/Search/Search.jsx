@@ -4,18 +4,18 @@ import styles from "./Search.module.css";
 import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg"; 
 
 const Search = ({ placeholder }) => {
+  const onSubmit = (e) => {
+    e.preventDefault(); // Prevents page reload
+  };
+
   return (
-    <div className={styles.wrapper}>
-      <input 
-        name="search"
-        className={styles.search} 
-        placeholder={placeholder} 
-        required
-      />
+    // Attach the onSubmit handler here to fix the warning
+    <form className={styles.wrapper} onSubmit={onSubmit}>
+      <input className={styles.search} placeholder={placeholder} required />
       <button className={styles.searchButton} type="submit">
-        <SearchIcon />
+        {/* Your Search Icon SVG component here */}
       </button>
-    </div>
+    </form>
   );
 };
 

@@ -1,47 +1,70 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Section.module.css";
 import Card from "../Card/Card";
-import axios from "axios";
+import Carousel from "../Carousel/Carousel";
+import { Tabs, Tab } from "@mui/material";
 
-const Section = ({ title, endpoint }) => {
-  const [data, setData] = useState([]);
+const Section = ({ title, data, type, filterSource }) => {
+  // Define these if you still want the toggle functionality for Albums
   const [carouselToggle, setCarouselToggle] = useState(true);
+  const [selectedTab, setSelectedTab] = useState(0);
 
   const handleToggle = () => {
     setCarouselToggle(!carouselToggle);
   };
 
-  useEffect(() => {
-    axios.get(endpoint)
-      .then((res) => setData(res.data))
-      .catch((err) => console.error(err));
-  }, [endpoint]);
+  const handleTabChange = (event, newValue) => {
+    setSelectedTab(newValue);
+  };
+
+  // Filter logic for Songs
+  const filteredData = data.filter((item) => {
+    if (selectedTab === 0) return true;
+    return item.genre.key === filterSource[selectedTab - 1].key;
+  });
 
   return (
     <div className={styles.sectionWrapper}>
       <div className={styles.header}>
         <h3>{title}</h3>
-        {/* Test Case 12: Text must change between Show All and Collapse */}
-        <h4 className={styles.toggleText} onClick={handleToggle}>
-          {carouselToggle ? "Show All" : "Collapse"}
-        </h4>
+        {/* Only show toggle if it's an album section */}
+        {type !== "song" && (
+          <h4 className={styles.toggleText} onClick={handleToggle}>
+            {carouselToggle ? "Show All" : "Collapse"}
+          </h4>
+        )}
       </div>
-      
-      {carouselToggle ? (
-        <div className={styles.cardsGrid}>
-           {/* In a real scenario, this would be your Carousel/Slider component */}
-           {/* For now, we render the grid to ensure data is visible to the test */}
-           {data.map((item) => (
-            <Card key={item.id} data={item} type="album" />
+
+      {/* Show Tabs only for Songs section */}
+      {type === "song" && (
+        <Tabs
+          value={selectedTab}
+          onChange={handleTabChange}
+          className={styles.tabs}
+          TabIndicatorProps={{ style: { backgroundColor: "#34c94b" } }}
+        >
+          <Tab label="All" className={styles.tab} />
+          {filterSource?.map((genre) => (
+            <Tab key={genre.key} label={genre.label} className={styles.tab} />
           ))}
-        </div>
-      ) : (
-        <div className={styles.cardsGrid}>
-          {data.map((item) => (
-            <Card key={item.id} data={item} type="album" />
-          ))}
-        </div>
+        </Tabs>
       )}
+
+      <div className={styles.cardWrapper}>
+        {/* Conditional rendering between Carousel and Grid for Albums */}
+        {carouselToggle ? (
+          <Carousel
+            data={type === "song" ? filteredData : data}
+            renderComponent={(item) => <Card data={item} type={type} />}
+          />
+        ) : (
+          <div className={styles.gridWrapper}>
+            {data.map((item) => (
+              <Card key={item.id} data={item} type={type} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

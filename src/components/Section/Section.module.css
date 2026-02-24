@@ -1,26 +1,57 @@
 .sectionWrapper {
-  padding: 20px 32px;
+  padding: 0px 32px; /* Adds the horizontal spacing shown in Figma */
+  margin-bottom: 40px;
 }
 
 .header {
   display: flex;
-  justify-content: space-between; /* Horizontal spacing between title and button */
+  justify-content: space-between; /* Pushes 'Show All' to the right */
   align-items: center;
-  margin-bottom: 24px; /* Vertical spacing between header and grid */
+  margin-bottom: 20px;
 }
 
 .header h3 {
   color: var(--color-white);
   font-weight: 600;
+  font-size: 20px;
 }
 
 .toggleText {
-  color: var(--color-primary);
+  color: var(--color-primary); /* Green color shown in your image */
   cursor: pointer;
+  font-weight: 600;
+}
+.cardWrapper {
+  display: flex;
+  flex-wrap: wrap; /* Important for when 'Collapse' is clicked */
+  gap: 40px;
 }
 
-.cardsGrid {
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 20px;
+}
+.gridWrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
-  gap: 40px; /* Spacing between cards */
+  gap: 40px; /* Horizontal gap between cards */
+  row-gap: 80px; /* Vertical gap ensures titles aren't cut off */
+  width: 100%;
+}
+.tabs {
+  margin-bottom: 25px;
+}
+
+.tab {
+  color: #ffffff !important;
+  text-transform: none !important;
+  font-family: "Poppins" !important;
+  font-weight: 600 !important;
+}
+
+/* Style for the active/selected tab text */
+.tab[aria-selected="true"] {
+  color: #34c94b !important;
 }
