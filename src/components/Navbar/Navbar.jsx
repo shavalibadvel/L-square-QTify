@@ -21,15 +21,18 @@ const Navbar = ({data}) => {
         <Search placeholder="Search a song of your choice" data={data} />
       </div>
       
-      <Button 
-        text="Give Feedback" 
-        onClick={() => setIsModalOpen(true)} 
-      />
+      <div className={styles.feedbackWrapper}>
+        <Button
+          text="Give Feedback"
+          onClick={() => setIsModalOpen(true)}
+          className={styles.feedbackButton}
+        />
 
       <Feedback
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
       />
+      </div>
     </nav>
   );
 };

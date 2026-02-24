@@ -22,10 +22,10 @@ const AlbumPage = () => {
     getAlbumData();
   }, [slug]);
 
-  // Prevent accessing properties of null 'album'
+ 
   if (!album) return <div className={styles.loading}>Loading...</div>;
 
-  // Pagination Logic
+  
   const totalPages = Math.ceil(album.songs.length / songsPerPage);
   const currentSongs = album.songs.slice((page - 1) * songsPerPage, page * songsPerPage);
 
@@ -37,12 +37,12 @@ const AlbumPage = () => {
 
   return (
     <div className={styles.wrapper}>
-      {/* Back Button */}
+     
       <div className={styles.backButton} onClick={() => navigate(-1)}>
         <div className={styles.arrowCircle}>{"<"}</div>
       </div>
 
-      {/* Album Header */}
+      
       <div className={styles.header}>
         <img src={album.image} alt={album.title} className={styles.albumImage} />
         <div className={styles.info}>
@@ -59,7 +59,7 @@ const AlbumPage = () => {
       </div>
 
       <div className={styles.tableSection}>
-        {/* Pagination Controls */}
+        
         <div className={styles.pagination}>
           <button 
             className={styles.arrowBtn} 
@@ -95,7 +95,7 @@ const AlbumPage = () => {
           <span>Duration</span>
         </div>
         
-        {/* Song Rows */}
+        
         <div className={styles.songList}>
           {currentSongs.map((song) => (
             <div key={song.id} className={styles.songRow}>

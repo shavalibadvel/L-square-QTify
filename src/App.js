@@ -8,11 +8,11 @@ import { fetchTopAlbums, fetchNewAlbums, fetchSongs } from "./api/api";
 import styles from "./App.module.css";
 
 function App() {
-  const [allData, setAllData] = useState([]); // Combined data for Search
+  const [allData, setAllData] = useState([]); 
   const [topAlbums, setTopAlbums] = useState([]);
   const [newAlbums, setNewAlbums] = useState([]);
 
-  // Centralized data fetching to avoid "Maximum update depth" errors
+  
   useEffect(() => {
     const getAllData = async () => {
       try {
@@ -22,7 +22,7 @@ function App() {
         
         setTopAlbums(top);
         setNewAlbums(newAlb);
-        // Combine all searchable items for the Navbar search
+        
         setAllData([...top, ...newAlb, ...songs]);
       } catch (e) {
         console.error("Failed to fetch App data", e);
@@ -40,10 +40,10 @@ function App() {
             path="/" 
             element={<Home topAlbums={topAlbums} newAlbums={newAlbums} />} 
           />
-          {/* Dynamic route for Album Details */}
+          
           <Route path="/album/:slug" element={<AlbumPage />} />
         </Routes>
-        {/* Persistent Music Player */}
+     
         <MusicPlayer />
       </BrowserRouter>
     </div>

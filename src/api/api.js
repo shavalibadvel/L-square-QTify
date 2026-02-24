@@ -39,10 +39,6 @@ export const fetchGenres = async () => {
   }
 };
 
-
-
-
-// Add this new export to fix the error
 export const fetchAlbumDetails = async (slug) => {
   try {
     const response = await axios.get(`${BACKEND_ENDPOINT}/album/${slug}`);

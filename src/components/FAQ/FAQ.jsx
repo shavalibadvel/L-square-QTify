@@ -10,7 +10,7 @@ const FAQ = () => {
     <div className={styles.faqWrapper}>
       <h1 className={styles.heading}>FAQs</h1>
       <div className={styles.accordionContainer}>
-        {/* Question 1 */}
+   
         <Accordion className={styles.accordion}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon className={styles.expandIcon} />}
@@ -25,7 +25,7 @@ const FAQ = () => {
           </AccordionDetails>
         </Accordion>
 
-        {/* Question 2 */}
+      
         <Accordion className={styles.accordion}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon className={styles.expandIcon} />}

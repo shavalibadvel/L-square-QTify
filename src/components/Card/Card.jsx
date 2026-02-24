@@ -7,7 +7,7 @@ const Card = ({ data, type }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // Only navigate if it's an album; songs might just play in the player
+    
     if (type === "album") {
       navigate(`/album/${data.slug}`);
     }
@@ -40,7 +40,7 @@ const Card = ({ data, type }) => {
             <div className={styles.card}>
               <img src={image} alt="song" loading="lazy" />
               <div className={styles.banner}>
-                {/* Specific requirement: Display 'Likes' for songs */}
+                
                 <Chip label={`${likes} Likes`} size="small" className={styles.chip} />
               </div>
             </div>

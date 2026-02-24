@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px 100px 20px; /* Bottom padding to clear the music player */
+  padding: 40px 20px 100px 20px; 
 }
 
 .heading {
@@ -29,7 +29,7 @@
   overflow: hidden;
 }
 
-/* Removes the default line before accordion expansion */
+
 .accordion:before {
   display: none;
 }
@@ -42,7 +42,7 @@
 }
 
 .expandIcon {
-  color: #34ad59; /* Qtify Green */
+  color: #34ad59; 
   font-size: 40px !important;
 }
 

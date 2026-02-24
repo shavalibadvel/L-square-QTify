@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 159px;
-  gap: 8px; /* Space between card and text */
+  gap: 8px; 
 }
 
 .card {
@@ -12,12 +12,12 @@
   border-radius: 10px;
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Stacks image on top of banner */
+  flex-direction: column;
 }
 
 .card img {
   width: 100%;
-  height: 170px; /* Leaves 35px for the banner */
+  height: 170px; 
   object-fit: cover;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .chip {
-  background-color: #121212 !important; /* Black background for the pill */
+  background-color: #121212 !important; 
   color: #ffffff !important;
   font-family: "Poppins" !important;
   font-size: 10px !important;

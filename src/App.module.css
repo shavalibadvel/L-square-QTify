@@ -1,7 +1,6 @@
 .appWrapper {
   background-color: #121212;
   min-height: 100vh;
-  /* Add this so the last row of songs is visible above the player */
   padding-bottom: 100px; 
   position: relative;
 }

@@ -1,11 +1,11 @@
 .sectionWrapper {
-  padding: 0px 32px; /* Adds the horizontal spacing shown in Figma */
+  padding: 0px 32px; 
   margin-bottom: 40px;
 }
 
 .header {
   display: flex;
-  justify-content: space-between; /* Pushes 'Show All' to the right */
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
@@ -17,13 +17,13 @@
 }
 
 .toggleText {
-  color: var(--color-primary); /* Green color shown in your image */
+  color: var(--color-primary); 
   cursor: pointer;
   font-weight: 600;
 }
 .cardWrapper {
   display: flex;
-  flex-wrap: wrap; /* Important for when 'Collapse' is clicked */
+  flex-wrap: wrap; 
   gap: 40px;
 }
 
@@ -36,8 +36,8 @@
 .gridWrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
-  gap: 40px; /* Horizontal gap between cards */
-  row-gap: 80px; /* Vertical gap ensures titles aren't cut off */
+  gap: 40px; 
+  row-gap: 80px; 
   width: 100%;
 }
 .tabs {
@@ -51,7 +51,7 @@
   font-weight: 600 !important;
 }
 
-/* Style for the active/selected tab text */
+
 .tab[aria-selected="true"] {
   color: #34c94b !important;
 }
@@ -67,7 +67,7 @@
   font-size: 16px !important;
 }
 
-/* Style for the active tab */
+
 .tab.Mui-selected {
   color: #34c94b !important;
 }

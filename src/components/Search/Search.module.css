@@ -1,44 +1,44 @@
 .wrapper {
-  position: relative; /* Context for the absolute dropdown */
+  position: relative; 
   width: 568px;
 }
 
 .searchContainer {
   display: flex;
-  align-items: center; /* Ensures vertical alignment */
+  align-items: center; 
   width: 100%;
-  /* This prevents the button from jumping to a new line */
+  
   flex-wrap: nowrap; 
 }
 
 .search {
-  width: 100%; /* Takes up all available space except the button width */
+  width: 100%; 
   height: 48px;
   padding: 0 15px;
   border: 1px solid #121212;
-  border-radius: 8px 0 0 8px; /* Rounded only on the left */
+  border-radius: 8px 0 0 8px; 
   outline: none;
   font-family: "Poppins";
-  /* Added: ensures padding doesn't push the width beyond 100% */
+  
   box-sizing: border-box; 
 }
 
 .searchButton {
   width: 66px;
-  height: 48px; /* Must match the input height exactly */
+  height: 48px; 
   background-color: #ffffff;
   border: 1px solid #121212;
-  border-left: none; /* Removes the double border in the middle */
-  border-radius: 0 8px 8px 0; /* Rounded only on the right */
+  border-left: none; 
+  border-radius: 0 8px 8px 0; 
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Added: prevents the button from shrinking */
+  
   flex-shrink: 0; 
 }
 
-/* Dropdown styling to match Desktop-3 screenshot */
+
 .dropdown {
   position: absolute;
   top: 50px;
@@ -80,7 +80,7 @@
 .optionTitle { color: #ffffff; margin: 0; font-size: 14px; font-weight: 500; }
 .optionArtists { color: #b3b3b3; margin: 0; font-size: 12px; }
 .optionMeta { color: #ffffff; font-size: 12px; }
-/* Custom Scrollbar for the Search Dropdown */
+
 .dropdown::-webkit-scrollbar {
   width: 8px;
 }
@@ -90,7 +90,7 @@
 }
 
 .dropdown::-webkit-scrollbar-thumb {
-  background: #34ad59; /* Qtify Green */
+  background: #34ad59;
   border-radius: 10px;
 }
 
@@ -109,7 +109,7 @@
   font-size: 16px !important;
 }
 
-/* Style for the active tab */
+
 .tab.Mui-selected {
   color: #34c94b !important;
 }

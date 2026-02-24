@@ -1,5 +1,5 @@
 import React from "react";
-import LogoImage from "../../assets/logo.svg"; // Path to your exported file
+import LogoImage from "../../assets/logo.svg"; 
 
 const Logo = () => {
   return <img src={LogoImage} alt="logo" width={67} />;

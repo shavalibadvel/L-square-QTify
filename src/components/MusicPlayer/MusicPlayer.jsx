@@ -37,7 +37,7 @@ const MusicPlayer = ({ songData }) => {
       </div>
 
       <div className={styles.volumeArea}>
-        {/* Placeholder for volume controls */}
+       
       </div>
     </div>
   );

@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-/* Ensure slides only take up the width of the card (159px) */
+
 .slide {
   width: auto !important;
   display: flex;
@@ -28,7 +28,7 @@
   right: 0;
 }
 
-/* If your arrows are too small, style the SVG inside */
+
 .leftNavigation svg,
 .rightNavigation svg {
   width: 30px;

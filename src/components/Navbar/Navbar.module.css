@@ -1,31 +1,30 @@
 .navbar {
   display: flex;
-  align-items: center; /* Vertically centers all elements */
+  align-items: center; 
   justify-content: space-between;
   height: 74px;
-  background-color: #34c94b; /* Correct brand green color */
-  padding: 0 32px; /* Standard horizontal padding */
+  background-color: #34c94b; 
+  padding: 0 32px;
   width: 100%;
   box-sizing: border-box;
 }
 
+
 .logoWrapper {
+  
   display: flex;
-  align-items: center;
-  /* Ensures the logo has space to its left and stays vertically centered */
-  flex: 1; 
-  justify-content: flex-start;
+  justify-content: flex-start; 
 }
+
 
 .searchWrapper {
-  flex: 2; /* Gives more space to the search bar to keep it centered */
   display: flex;
-  justify-content: center;
+  justify-content: center; 
 }
 
-/* Ensure the button doesn't shrink and stays aligned right */
-.navbar > button {
-  flex: 1;
+
+.buttonWrapper {
+   
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; 
 }

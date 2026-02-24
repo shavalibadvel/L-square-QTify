@@ -66,12 +66,7 @@ const Home = () => {
 
         <hr className={styles.divider} />
 
-        {/* Songs Section Requirements:
-          1. Title "Songs"
-          2. Type "song" (switches 'Follows' to 'Likes')
-          3. filterSource (provides the Tabs data)
-          4. No 'Show All' button (handled inside Section via type prop)
-        */}
+        
         <Section
           title="Songs"
           data={songData}

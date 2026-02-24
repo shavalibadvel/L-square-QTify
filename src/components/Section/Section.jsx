@@ -17,8 +17,7 @@ const Section = ({ title, data, type, filterSource }) => {
     setSelectedTab(newValue);
   };
 
-  // Filter logic: If 'All' is selected (index 0), show everything. 
-  // Otherwise, filter by genre key.
+  
   const filteredData = data.filter((item) => {
     if (selectedTab === 0) return true;
     return item.genre.key === filterSource[selectedTab - 1].key;
@@ -28,7 +27,7 @@ const Section = ({ title, data, type, filterSource }) => {
     <div className={styles.sectionWrapper}>
       <div className={styles.header}>
         <h3>{title}</h3>
-        {/* Requirement: No 'Show All' button for songs section */}
+        
         {type !== "song" && (
           <h4 className={styles.toggleText} onClick={() => setCarouselToggle(!carouselToggle)}>
             {carouselToggle ? "Show All" : "Collapse"}
@@ -36,7 +35,7 @@ const Section = ({ title, data, type, filterSource }) => {
         )}
       </div>
 
-      {/* Requirement: Use MUI Tabs with custom styling */}
+ 
       {type === "song" && (
         <Tabs
         value={selectedTab}
@@ -44,7 +43,7 @@ const Section = ({ title, data, type, filterSource }) => {
         aria-label="songs filter"
         TabIndicatorProps={{
           style: {
-            backgroundColor: "#34c94b", // Qtify Green
+            backgroundColor: "#34c94b", 
           },
         }}
       >

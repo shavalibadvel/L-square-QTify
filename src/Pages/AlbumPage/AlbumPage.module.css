@@ -1,7 +1,7 @@
 .wrapper {
   background-color: #121212;
   min-height: 100vh;
-  /* Extra padding at bottom to clear the Music Player */
+ 
   padding: 30px 50px 150px 50px; 
   color: white;
   font-family: "Poppins", sans-serif;
@@ -26,13 +26,13 @@
 .shuffleBtn { background-color: #34c94b; border: none; padding: 12px 30px; border-radius: 12px; font-weight: 700; cursor: pointer; }
 .libraryBtn { background-color: transparent; border: 1px solid #34c94b; color: #34c94b; padding: 12px 30px; border-radius: 12px; font-weight: 700; cursor: pointer; }
 
-/* Pagination Styling */
+
 .pagination { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-bottom: 10px; }
 .pageBtn, .arrowBtn { background: transparent; color: white; border: 1px solid #333; cursor: pointer; padding: 5px 12px; border-radius: 4px; }
 .activePage { background: #34c94b; color: black; border: 1px solid #34c94b; font-weight: bold; padding: 5px 12px; border-radius: 4px; }
 .arrowBtn:disabled { opacity: 0.3; cursor: not-allowed; }
 
-/* Table Section */
+
 .tableHeader {
   display: grid; grid-template-columns: 4fr 3fr 1fr;
   padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);

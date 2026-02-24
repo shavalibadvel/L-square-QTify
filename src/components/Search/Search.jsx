@@ -2,20 +2,20 @@ import React, { useState, useEffect } from "react";
 import styles from "./Search.module.css";
 import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
 
-// Fixed syntax: data defaults to empty array to avoid .filter() errors
+
 const Search = ({ placeholder, data = [] }) => {
   const [val, setVal] = useState("");
   const [filteredOptions, setFilteredOptions] = useState([]);
 
-  // Debouncing logic
+  
   useEffect(() => {
-    // If input is empty, clear results immediately
+   
     if (!val.trim()) {
       setFilteredOptions([]);
       return;
     }
 
-    // Wait 300ms after the user stops typing before filtering
+    
     const timer = setTimeout(() => {
       if (data && data.length > 0) {
         const res = data.filter((item) =>
@@ -25,7 +25,7 @@ const Search = ({ placeholder, data = [] }) => {
       }
     }, 300);
 
-    // Cleanup: clears the timer if the user types again before 300ms
+    
     return () => clearTimeout(timer);
   }, [val,data]);
 
