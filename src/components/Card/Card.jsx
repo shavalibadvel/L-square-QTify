@@ -16,7 +16,7 @@ const Card = ({ data, type }) => {
   const renderCard = () => {
     switch (type) {
       case "album": {
-        const { image, follows, title, songs, slug } = data;
+        const { image, follows, title, songs } = data;
         return (
           <Tooltip title={`${songs?.length} songs`} placement="top" arrow>
             <div className={styles.wrapper} onClick={handleClick}>
