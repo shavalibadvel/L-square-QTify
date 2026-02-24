@@ -3,7 +3,7 @@
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
   border-radius: 8px; /* Required */
-  padding: 10px 20px;
+  padding: 12px 22px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   cursor: pointer; /* Pointer on hover */

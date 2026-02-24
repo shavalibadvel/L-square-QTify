@@ -1,17 +1,21 @@
 import React from "react";
 import styles from "./Search.module.css";
-// 1. Regular import for PNG
-import searchIcon from "../../assets/search-icon.svg"; 
+// Match the .svg extension shown in your sidebar
+import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg"; 
 
 const Search = ({ placeholder }) => {
   return (
-    <form className={styles.wrapper}>
-      <input className={styles.search} placeholder={placeholder} />
-      <button className={styles.searchButton}>
-        {/* 2. Use an img tag instead of <SearchIcon /> */}
-        <img src={searchIcon} alt="search icon" width={20} />
+    <div className={styles.wrapper}>
+      <input 
+        name="search"
+        className={styles.search} 
+        placeholder={placeholder} 
+        required
+      />
+      <button className={styles.searchButton} type="submit">
+        <SearchIcon />
       </button>
-    </form>
+    </div>
   );
 };
 
