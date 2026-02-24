@@ -2,12 +2,24 @@ import React, { useState } from "react";
 import Feedback from "../Feedback/Feedback";
 import Button from "../Button/Button"; // Your custom button component
 
-const Navbar = () => {
+import Logo from "../Logo/Logo";
+import Search from "../Search/Search";
+
+import styles from "./Navbar.module.css";
+
+const Navbar = ({data}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <nav>
-      {/* Your logo and search bar code here */}
+    <nav className={styles.navbar}>
+      
+      <div className={styles.logoWrapper}>
+        <Logo />
+      </div>
+      
+      <div className={styles.searchWrapper}>
+        <Search placeholder="Search a song of your choice" data={data} />
+      </div>
       
       <Button 
         text="Give Feedback" 
