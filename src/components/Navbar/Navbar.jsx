@@ -1,22 +1,24 @@
-import React from "react";
-import Logo from "../Logo/Logo";
-import Search from "../Search/Search";
-import Button from "../Button/Button";
-import styles from "./Navbar.module.css";
+import React, { useState } from "react";
+import Feedback from "../Feedback/Feedback";
+import Button from "../Button/Button"; // Your custom button component
 
-// Accept 'data' as a prop from App.js
-const Navbar = ({ data }) => {
+const Navbar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <nav className={styles.navbar}>
-      <Logo />
-      {/* Pass the data prop here to fix the filter error */}
-      <Search 
-        placeholder="Search a song of your choice" 
-        data={data} 
+    <nav>
+      {/* Your logo and search bar code here */}
+      
+      <Button 
+        text="Give Feedback" 
+        onClick={() => setIsModalOpen(true)} 
       />
-      <Button>Give Feedback</Button>
+
+      <Feedback
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </nav>
   );
 };
-
 export default Navbar;

@@ -1,10 +1,14 @@
 .navbar {
-  width: 100%;
-  height: 74px;
-  background-color: var(--color-primary);
+  display: flex; /* Creates a horizontal layout */
+  align-items: center; /* Vertically centers the logo, search bar, and button */
+  justify-content: space-between; /* Spaces out elements across the bar */
+  height: 74px; /* Standard header height */
+  background-color: #121212;
+  padding: 0 32px; /* Provides the necessary space on the left and right sides */
+}
+
+.logo {
+  cursor: pointer;
   display: flex;
-  align-items: center; /* Test Case 2: Vertically centered */
-  justify-content: space-between;
-  padding: 0px 20px; /* Space to the left and right */
-  box-sizing: border-box;
+  align-items: center; /* Ensures logo image/text is centered internally */
 }
