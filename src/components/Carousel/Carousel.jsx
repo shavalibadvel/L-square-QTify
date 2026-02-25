@@ -6,7 +6,7 @@ import styles from "./Carousel.module.css";
 import CarouselLeftNavigation from "./CarouselLeftNavigation";
 import CarouselRightNavigation from "./CarouselRightNavigation";
 
-
+// bit of carousel modification to reset to first slide when data changes, preventing "Maximum update depth exceeded" errors
 const Controls = ({ data }) => {
   const swiper = useSwiper();
 
