@@ -37,7 +37,12 @@ const MusicPlayer = ({ songData }) => {
       </div>
 
       <div className={styles.volumeArea}>
-       
+       {/* here has to add the volume control and queue icons, but I ran out of time to implement those, so leaving this as a placeholder for now
+      </div> */}
+      <div className={styles.volumeControl}>
+        <span>Volume</span>
+        <Slider size="small" defaultValue={50} className={styles.volumeSlider} />
+      </div>
       </div>
     </div>
   );
