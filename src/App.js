@@ -6,13 +6,14 @@ import AlbumPage from "./Pages/AlbumPage/AlbumPage";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 import { fetchTopAlbums, fetchNewAlbums, fetchSongs } from "./api/api";
 import styles from "./App.module.css";
+import { render } from "@testing-library/react";
 
 function App() {
   const [allData, setAllData] = useState([]); 
   const [topAlbums, setTopAlbums] = useState([]);
   const [newAlbums, setNewAlbums] = useState([]);
 
-  
+  // for initial render, we fetch all the data (top albums, new albums, songs) and store it in state. This allows us to pass the combined data to the Navbar for search functionality, while still keeping the top and new albums separate for the Home page sections.
   useEffect(() => {
     const getAllData = async () => {
       try {
