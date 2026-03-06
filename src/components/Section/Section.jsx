@@ -34,7 +34,7 @@ const Section = ({ title, data, type, filterSource }) => {
           </h4>
         )}
       </div>
-
+        {/* // Only show tabs for songs section, as albums don't have genre filters in the API */}
  
       {type === "song" && (
         <Tabs
