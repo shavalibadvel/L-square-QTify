@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./MusicPlayer.module.css";
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import SkipNextIcon from '@mui/icons-material/SkipNext';

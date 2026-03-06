@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./FAQ.module.css";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";

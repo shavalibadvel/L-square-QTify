@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Chip, Tooltip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import styles from "./Card.module.css";

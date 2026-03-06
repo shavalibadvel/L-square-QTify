@@ -25,7 +25,7 @@ const AlbumPage = () => {
  
   if (!album) return <div className={styles.loading}>Loading...</div>;
 
-
+  
   const totalPages = Math.ceil(album.songs.length / songsPerPage);
   const currentSongs = album.songs.slice((page - 1) * songsPerPage, page * songsPerPage);
 

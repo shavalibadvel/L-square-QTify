@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Section.module.css";
 import Card from "../Card/Card";
 import Carousel from "../Carousel/Carousel";
